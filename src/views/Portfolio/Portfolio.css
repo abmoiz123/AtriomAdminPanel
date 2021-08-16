@@ -1,0 +1,23 @@
+.card_img {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    object-fit: cover;
+    object-position: top right;
+    height: 200px;
+}
+.card_text {
+    text-align: center;
+}
+.card_title {
+    color: #F6B10A;
+}
+.card_category {
+    font-weight: 400 !important;
+    color: rgb(1, 53, 103);
+}
+.card_btn {
+    width: 100%;
+    background-color: #F6B10A;
+    color: rgb(1, 53, 103);
+    font-weight: bolder;
+}
