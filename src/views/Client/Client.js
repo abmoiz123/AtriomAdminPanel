@@ -15,13 +15,13 @@ import {
 } from '@coreui/react'
 import AddIcon from '@material-ui/icons/Add';
 import CIcon from '@coreui/icons-react'
-import './Portfolio.css'
-import img1 from '../../assets/project1.png'
-import img2 from '../../assets/project2.png'
-import img3 from '../../assets/project3.png'
-import img4 from '../../assets/project4.png'
+import './Client.css'
+import img1 from '../../assets/client01.png'
+import img2 from '../../assets/client02.png'
+import img3 from '../../assets/client03.png'
+import img4 from '../../assets/client04.png'
 
-class Portfolio extends Component {
+class Client extends Component {
     constructor() {
         super();
         this.state = {
@@ -29,58 +29,22 @@ class Portfolio extends Component {
                 {
                     pId: '1',
                     pImg: img1,
-                    pTitle: 'a2z utility',
-                    pCategory: 'wordpress',
-                    pLink: 'https://atriom.co.uk/',
+                    pTitle: 'Vape',
                 },
                 {
                     pId: '2',
                     pImg: img2,
-                    pTitle: 'a2z dfsddsd',
-                    pCategory: 'wordpress',
-                    pLink: 'https://atriom.co.uk/',
+                    pTitle: 'Xport Buy',
                 },
                 {
                     pId: '3',
                     pImg: img3,
-                    pTitle: 'a2z dfdsf',
-                    pCategory: 'wordpress',
-                    pLink: 'https://atriom.co.uk/',
+                    pTitle: 'Commerce Startups',
                 },
                 {
                     pId: '4',
                     pImg: img4,
-                    pTitle: 'a2z dsfdy',
-                    pCategory: 'wordpress',
-                    pLink: 'https://atriom.co.uk/',
-                },
-                {
-                    pId: '5',
-                    pImg: img1,
-                    pTitle: 'a2z utility',
-                    pCategory: 'wordpress',
-                    pLink: 'https://atriom.co.uk/',
-                },
-                {
-                    pId: '6',
-                    pImg: img2,
-                    pTitle: 'a2z dfsddsd',
-                    pCategory: 'wordpress',
-                    pLink: 'https://atriom.co.uk/',
-                },
-                {
-                    pId: '7',
-                    pImg: img3,
-                    pTitle: 'a2z dfdsf',
-                    pCategory: 'wordpress',
-                    pLink: 'https://atriom.co.uk/',
-                },
-                {
-                    pId: '8',
-                    pImg: img4,
-                    pTitle: 'a2z dsfdy',
-                    pCategory: 'wordpress',
-                    pLink: 'https://atriom.co.uk/',
+                    pTitle: 'Lamaisah',
                 },
             ],
             targetEdit: [],
@@ -204,12 +168,10 @@ class Portfolio extends Component {
                         return (
                             <CCol key={i} xs="6" sm="4" md="3">
                                 <div className="card">
-                                    <img src={v.pImg} alt={v.pTitle} className="card_img" />
-                                    <div className="card-body card_text">
-                                        <h4 className="card_title">{v.pTitle}</h4>
-                                        <h5 className="card_category">{v.pCategory}</h5>
-                                        <p className="card_category">{v.pLink}</p>
-                                        <button id={v.pId} onClick={this.targetProject} type="button" className="btn card_btn">Edit</button>
+                                    <img src={v.pImg} alt={v.pTitle} className="card_client_img" />
+                                    <div className="card-body card_client_text">
+                                        <h4 className="card_client_title">{v.pTitle}</h4>
+                                        <button id={v.pId} onClick={this.targetProject} type="button" className="btn card_client_btn">Edit</button>
                                     </div>
                                 </div>
                             </CCol>
@@ -236,22 +198,6 @@ class Portfolio extends Component {
                                     </CCol>
                                     <CCol xs="12" md="9">
                                         <CInput id="text-input" name="pTitle" onChange={this.editValue} value={targetEdit.pTitle || ''} />
-                                    </CCol>
-                                </CFormGroup>
-                                <CFormGroup row>
-                                    <CCol md="3">
-                                        <CLabel htmlFor="text-input">Change Category</CLabel>
-                                    </CCol>
-                                    <CCol xs="12" md="9">
-                                        <CInput id="text-input" name="pCategory" onChange={this.editValue} value={targetEdit.pCategory || ''} />
-                                    </CCol>
-                                </CFormGroup>
-                                <CFormGroup row>
-                                    <CCol md="3">
-                                        <CLabel htmlFor="text-input">Change Link</CLabel>
-                                    </CCol>
-                                    <CCol xs="12" md="9">
-                                        <CInput id="text-input" name="pLink" onChange={this.editValue} value={targetEdit.pLink || ''} />
                                     </CCol>
                                 </CFormGroup>
                                 <CFormGroup row>
@@ -287,13 +233,13 @@ class Portfolio extends Component {
                         </CModalFooter>
                     </CModal>
 
-                    <CButton className="add_Project_btn" onClick={this.toggle3} ><AddIcon style={{fontSize: 40}} /></CButton>
+                    <CButton className="add_Client_btn" onClick={this.toggle3} ><AddIcon style={{fontSize: 40}} /></CButton>
 
                     <CModal
                         show={this.state.modal3}
                         onClose={this.toggle3}
                     >
-                        <CModalHeader closeButton>Add Project</CModalHeader>
+                        <CModalHeader closeButton>Add Client</CModalHeader>
                         <CModalBody>
                             <CForm className="form-horizontal">
                                 <CFormGroup row>
@@ -306,30 +252,14 @@ class Portfolio extends Component {
                                 </CFormGroup>
                                 <CFormGroup row>
                                     <CCol md="3">
-                                        <CLabel htmlFor="text-input">Project Title</CLabel>
+                                        <CLabel htmlFor="text-input">Client Title</CLabel>
                                     </CCol>
                                     <CCol xs="12" md="9">
-                                        <CInput id="text-input" name="pTitle" onChange={this.addValue} placeholder="project Title..." />
+                                        <CInput id="text-input" name="pTitle" onChange={this.addValue} placeholder="Client Title..." />
                                     </CCol>
                                 </CFormGroup>
                                 <CFormGroup row>
-                                    <CCol md="3">
-                                        <CLabel htmlFor="text-input">Project Category</CLabel>
-                                    </CCol>
-                                    <CCol xs="12" md="9">
-                                        <CInput id="text-input" name="pCategory" onChange={this.addValue} placeholder="project Category..." />
-                                    </CCol>
-                                </CFormGroup>
-                                <CFormGroup row>
-                                    <CCol md="3">
-                                        <CLabel htmlFor="text-input">Project Link</CLabel>
-                                    </CCol>
-                                    <CCol xs="12" md="9">
-                                        <CInput id="text-input" name="pLink" onChange={this.addValue} placeholder="project Link..." />
-                                    </CCol>
-                                </CFormGroup>
-                                <CFormGroup row>
-                                    <CLabel col md="3" htmlFor="file-input">Project Image</CLabel>
+                                    <CLabel col md="3" htmlFor="file-input">Client Image</CLabel>
                                     <CCol xs="12" md="9">
                                         <CInputFile id="file-input" multiple={false} type="file" ref={targetEdit.pImg} onChange={this.addImg} name="pImg" />
                                     </CCol>
@@ -366,4 +296,4 @@ class Portfolio extends Component {
     }
 }
 
-export default Portfolio;
+export default Client;

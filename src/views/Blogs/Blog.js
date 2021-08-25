@@ -15,13 +15,13 @@ import {
 } from '@coreui/react'
 import AddIcon from '@material-ui/icons/Add';
 import CIcon from '@coreui/icons-react'
-import './Portfolio.css'
+import './Blog.css'
 import img1 from '../../assets/project1.png'
 import img2 from '../../assets/project2.png'
 import img3 from '../../assets/project3.png'
 import img4 from '../../assets/project4.png'
 
-class Portfolio extends Component {
+class Client extends Component {
     constructor() {
         super();
         this.state = {
@@ -366,4 +366,4 @@ class Portfolio extends Component {
     }
 }
 
-export default Portfolio;
+export default Client;
